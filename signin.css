@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    width: 50%;
+    padding-top: 30px;
+    margin: auto;
+    
+
+}
+
+
+
+ img{
+
+    height: 42px;
+    width: 42px;
+    margin-top: 10px;
+    margin-left: 48%;
+    
+    
+}
+h2{
+    margin:10px ;
+    text-align: center;
+    font-family: "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    color: #333333;
+    line-height: 28.75px;
+}
+#data1{
+width: 95%;
+margin: 10px;
+height: 40px;
+}
+#data2{
+    width: 95%;
+margin: 10px;
+height: 40px;
+}
+input{
+    width: 10%;
+    height: 20px;
+    
+}
+
+.checkingbox{
+    font-size: 12px;
+  margin-left: 40px;
+  text-align: start;
+  line-height: 17.142px;
+  font-family:"Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif ;
+}
+
+#signin{
+    height: 50px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color:rgb(204, 0, 0) ;
+    border-color: rgb(204, 0, 0);
+    color: white;
+    font-size: 19px;
+    font-family:"Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif ;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+}
+a{
+    text-align:center ;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+  
+}
+a>p{
+    margin: 20px;
+    font-family:"Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif  ;
+}
+button{
+    height: 50px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    text-align: center;
+
+}
