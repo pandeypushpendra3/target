@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Target Join</title>
+    <link rel="stylesheet" href="createAccount.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqSGaIdBci4Ky8WzmufcnMY24UcwX07stRzg&usqp=CAU"
+          alt=""
+        />
+      </div>
+      <h2>Create your Target account</h2>
+      <div id="info">
+        <form id="form" >
+          <input id="Email" type="text" placeholder="Email address" />
+          <input id="first" type="text" placeholder="First name" />
+          <input id="last" type="text" placeholder="Last name" />
+          <input
+            id="Mobile"
+            type="text"
+            placeholder="Mobile phone number(optional)"
+          />
+          <input
+            id="createPassword"
+            type="Password"
+            placeholder="Create password"
+          />
+        </form>
+      </div>
+      <input id="checkbox " type="checkbox" />
+      <label>Keep me signed in</label><br />
+      <label class="checkingbox"
+        >By checking this box you won't have to sign in as often on this device.
+        For your security, </label
+      ><br />
+      <label class="checkingbox"
+        >we recommend only checking this box on your personal devices.</label
+      >
+      <div id="policy">
+        <p>
+          By creating an account, you are agreeing to the Target terms &
+          conditions and Target privacy
+          <br />policy, including receipt of Target exclusive email offers and
+          promotions. To manage your<br />
+          marketing choices please access the Choice section of the Target
+          Privacy Policy or call Target <br />Guest Relations.
+        </p>
+      </div>
+
+      <button id="create_account_btn" onsubmit="store(event)" type="submit">Create account</button>
+      <a href="signin.html"><p>Or sign in</p></a>
+    </div>
+  </body>
+  <script src="createAccount.js"></script>
+</html>
