@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Target/Bag-Pack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap"rel="stylesheet"/>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTcgMTM1IiBoZWlnaHQ9IjEwMCIgd2lkdGg9IjE0MCI+PHBhdGggZD0iTTAgMTExLjhoMTIuOXYzLjJIMy44djMuN2g4LjR2Mi45SDMuOHY0LjNoOS4zdjMuMkgwek0xOC42IDEyMi41bC00LjEtNS45aDMuOWwyLjIgMy4yIDIuMi0zLjJoMy44bC00LjEgNS44IDQuNiA2LjdoLTMuOWwtMi42LTQtMi42IDRoLTMuOXpNMjguMiAxMTYuNmgzLjN2MS42Yy44LTEuMyAyLjItMiAzLjctMS45IDMuOCAwIDUuNyAzIDUuNyA2LjcgMCAzLjQtMS45IDYuNS01LjUgNi41LTEuNSAwLTIuOS0uNy0zLjgtMS45djUuOWgtMy40di0xNi45em05LjIgNi4zYzAtMS45LS43LTQtMy00LTEuOSAwLTIuOSAxLjUtMi45IDQgMCAyLjMuOSA0IDMgNHMyLjktMS44IDIuOS00TTQyIDEyMi44YzAtMy44IDIuNi02LjYgNi40LTYuNiA0IDAgNi4xIDMuMSA2LjEgNi44di43aC05Yy4xIDIuMiAxLjEgMy4yIDMgMy4yIDEuMyAwIDIuNS0uOCAyLjctMS42aDNjLS45IDIuOC0yLjkgNC4yLTUuOCA0LjItNC0uMS02LjQtMi44LTYuNC02LjdtOS0xLjNjLS4zLTEuOS0xLjItMi42LTIuOC0yLjYtMS41LS4xLTIuNyAxLTIuOCAyLjR2LjJINTF6TTU1LjcgMTIzYzAtNCAyLjQtNi44IDYuNC02LjggMy4yIDAgNS43IDEuNyA1LjkgNC43aC0zLjRjLS4xLTEuMy0xLjItMi4yLTIuNC0yLjJoLS4xYy0yLjEgMC0yLjkgMi0yLjkgNC4xcy44IDQgMi45IDRjMS41IDAgMi41LS45IDIuNy0yLjVoMy4zYy0uNSAzLjMtMi43IDUuMS02IDUuMS0zLjkgMC02LjQtMi44LTYuNC02LjRNNzAuNyAxMjYuMnYtNy4zaC0yLjF2LTIuM2gyLjF2LTMuOGgzLjR2My44aDIuNXYyLjNoLTIuNXY2LjJjMCAxLjIuMyAxLjQgMS41IDEuNC40IDAgLjcgMCAxLjEtLjF2Mi43Yy0uNy4xLTEuMy4xLTIgLjEtMi43IDAtNC0uOC00LTNNODUuNCAxMTEuOGg1LjNsNC4xIDExLjkgMy45LTExLjloNS4zdjE3LjNoLTMuNnYtMTIuM2wtNC4yIDEyLjNoLTNMODkgMTE3djEyLjFoLTMuNnpNMTA1LjcgMTIyLjhjMC00IDIuNS02LjYgNi41LTYuNnM2LjUgMi42IDYuNSA2LjYtMi42IDYuNi02LjUgNi42LTYuNS0yLjYtNi41LTYuNm05LjUgMGMwLTItLjctNC0zLjEtNC0xLjkgMC0zIDEuNS0zIDRzMS4xIDQgMyA0YzIgMCAzLjEtMS41IDMuMS00TTEyMCAxMTYuNmgzLjN2Mi4zYy43LTEuNiAyLjItMi42IDQtMi42LjMgMCAuNSAwIC44LjF2My4yYy0uNC0uMS0uOC0uMS0xLjItLjEtMi41IDAtMy40IDEuNy0zLjQgNHY1LjZIMTIwdi0xMi41ek0xMjguMyAxMjIuOGMwLTMuOCAyLjYtNi42IDYuNC02LjYgNCAwIDYuMSAzLjEgNi4xIDYuOHYuN2gtOWMuMSAyLjIgMS4xIDMuMiAzIDMuMiAxLjMgMCAyLjUtLjggMi43LTEuNmgzYy0uOSAyLjgtMi45IDQuMi01LjggNC4yLTMuOS0uMS02LjMtMi44LTYuNC02LjdtOS4xLTEuM2MtLjMtMS45LTEuMi0yLjYtMi44LTIuNi0xLjUtLjEtMi43IDEtMi44IDIuNHYuMmg1LjZ6TTE0MS45IDEyNy4yYy0uMS0xLjEuOC0yLjEgMS45LTIuMiAxLjEtLjEgMi4xLjggMi4yIDEuOXYuMmMwIDEuMS0uOSAyLTIgMi0xLjIuMi0yLjEtLjctMi4xLTEuOU0xNTQuNyAxMTEuOGg3LjhjNCAwIDUuOSAyLjUgNS45IDUuNXMtMiA1LjUtNS45IDUuNWgtNHY2LjJoLTMuOHYtMTcuMnptNi44IDguMWMyLjIgMCAzLjMtLjcgMy4zLTIuNiAwLTEuOC0xLTIuNi0zLjItMi42aC0zdjUuMmgyLjl6TTE2OC45IDEyNS43Yy0uMS0xIC4zLTIgMS4xLTIuNi44LS43IDItMSA0LTEuMyAyLjItLjIgMy4yLS40IDMuMi0xLjUgMC0xLjQtMS0xLjctMi4yLTEuNy0xLjQgMC0yLjIuNi0yLjMgMS45aC0zLjRjLjEtMi43IDIuNC00LjIgNS45LTQuMiAzLjcgMCA1LjUgMS4yIDUuNSAzLjZ2NmMwIC44LjEgMSAuOSAxaC4xdjIuMmMtLjQuMi0uOS4zLTEuNC4zLTEuNiAwLTIuNC0uNS0yLjctMS42LS44IDEtMi4zIDEuNy00LjQgMS43LTIuNi0uMS00LjMtMS40LTQuMy0zLjhtOC4zLTEuNFYxMjNjLS4zLjMtLjkuNS0yLjEuNi0xLjguMi0yLjguNi0yLjggMiAwIDEgLjYgMS42IDIuMSAxLjYgMS44LS4xIDIuOC0xLjEgMi44LTIuOU0xODIuNiAxMzMuM3YtMi44Yy42LjEgMS4yLjEgMS44LjEuOCAwIDEuNS0uNiAxLjUtMS40di0uMmMwLS4zIDAtLjUtLjEtLjhsLTQuNC0xMS43aDMuN2wyLjggOC42IDIuNy04LjZoMy42bC01LjIgMTQuMWMtLjcgMi0xLjkgMi44LTQuMyAyLjgtLjcuMS0xLjQgMC0yLjEtLjFNMjAxLjUgMTExLjhoMy44djE0LjFoOC40djMuMmgtMTIuMnpNMjE0LjUgMTIyLjhjMC0zLjggMi42LTYuNiA2LjQtNi42IDQgMCA2LjEgMy4xIDYuMSA2Ljh2LjdoLTljLjEgMi4yIDEuMSAzLjIgMyAzLjIgMS4zIDAgMi41LS44IDIuNy0xLjZoM2MtLjkgMi44LTIuOSA0LjItNS44IDQuMi00LS4xLTYuNC0yLjgtNi40LTYuN205LTEuM2MtLjMtMS45LTEuMi0yLjYtMi44LTIuNi0xLjUtLjEtMi43IDEtMi44IDIuNHYuMmg1LjZ6TTIyNy43IDEyNWgzLjNjMCAxLjQgMS4yIDIuMSAyLjYgMi4xIDEuMiAwIDIuMy0uNSAyLjMtMS42IDAtLjktMS4xLTEuNC0zLjgtMS45LTIuOS0uNi00LjEtMS42LTQuMS0zLjQgMC0yLjYgMS45LTQgNS40LTQgMy40IDAgNS4zIDEuNCA1LjUgNGgtMy4zYy0uMS0xLjItLjktMS43LTIuMy0xLjctMS4zIDAtMS45LjQtMS45IDEuMiAwIC44LjcgMS4yIDIuNyAxLjYgMi41LjUgMy41LjkgNC4yIDEuNS42LjYgMSAxLjQgMSAyLjMgMCAzLjItMi44IDQuMy01LjcgNC4zLTMuNCAwLTUuOC0xLjQtNS45LTQuNE0yNDAuMSAxMjVoMy4zYzAgMS40IDEuMiAyLjEgMi42IDIuMSAxLjIgMCAyLjItLjUgMi4yLTEuNiAwLS45LTEuMS0xLjQtMy44LTEuOS0yLjktLjYtNC4xLTEuNi00LjEtMy40IDAtMi42IDEuOS00IDUuNC00IDMuNCAwIDUuMyAxLjQgNS41IDRoLTMuM2MtLjEtMS4yLS45LTEuNy0yLjMtMS43cy0xLjkuNC0xLjkgMS4yYzAgLjguOCAxLjIgMi43IDEuNiAyLjUuNSAzLjUuOSA0LjIgMS41LjYuNiAxIDEuNCAxIDIuMyAwIDMuMi0yLjggNC4zLTUuNyA0LjMtMy4zIDAtNS43LTEuNC01LjgtNC40TTI1Mi43IDEyNy4yYy0uMS0xLjEuOC0yLjEgMS45LTIuMiAxLjEtLjEgMi4xLjggMi4yIDEuOXYuMmMwIDEuMS0uOSAyLTIgMi0xLjEuMi0yLS43LTIuMS0xLjkiLz48ZyBmaWxsPSIjQzAwIj48cGF0aCBkPSJNOTYuMyAzMi41Qzk2LjMgMTQuNyAxMTAuNy4zIDEyOC41LjNzMzIuMiAxNC40IDMyLjIgMzIuMmMwIDE3LjgtMTQuNCAzMi4yLTMyLjIgMzIuMi0xNy44LjEtMzIuMi0xNC40LTMyLjItMzIuMnpNMTI4LjUgNTRjMTEuOSAwIDIxLjUtOS42IDIxLjUtMjEuNVMxNDAuNCAxMSAxMjguNSAxMSAxMDcgMjAuNiAxMDcgMzIuNSAxMTYuNiA1NCAxMjguNSA1NHptMTAuNy0yMS41YzAgNS45LTQuOCAxMC43LTEwLjcgMTAuNy01LjkgMC0xMC43LTQuOC0xMC43LTEwLjcgMC01LjkgNC44LTEwLjcgMTAuNy0xMC43IDUuOSAwIDEwLjcgNC44IDEwLjcgMTAuN3oiLz48cGF0aCBkPSJNMTAxLjggNjguOXYzLjhoMi41Vjc1aC0yLjV2Ni4zYzAgMS4yLjMgMS41IDEuNSAxLjUuNCAwIC43IDAgMS4xLS4xdjIuN2MtLjcuMS0xLjQuMS0yLjEuMS0yLjYgMC00LS44LTQtMy4xVjc1aC0yLjF2LTIuM2gyLjF2LTMuOGgzLjV6TTExNi45IDgyLjFjMCAuOC4xIDEgLjkgMWguMXYyLjNjLS40LjItLjkuMy0xLjQuMy0xLjYgMC0yLjQtLjUtMi43LTEuNi0uOCAxLTIuMyAxLjctNC40IDEuNy0yLjYgMC00LjMtMS4zLTQuMy0zLjgtLjEtMSAuMy0yIDEuMS0yLjcuOC0uNyAyLTEgNC4xLTEuMyAyLjMtLjMgMy4yLS40IDMuMi0xLjYgMC0xLjQtMS0xLjctMi4yLTEuNy0xLjQgMC0yLjIuNi0yLjMgMS45aC0zLjVjLjEtMi44IDIuNC00LjIgNS45LTQuMiAzLjcgMCA1LjUgMS4yIDUuNSAzLjZ2Ni4xem0tNi4zIDEuM2MxLjkgMCAyLjgtMSAyLjgtMi45di0xLjNjLS4zLjMtLjkuNS0yLjEuNi0xLjguMi0yLjguNi0yLjggMiAwIDEgLjYgMS42IDIuMSAxLjZ6TTEyNi45IDcyLjV2My4yYy0uNC0uMS0uOC0uMS0xLjItLjEtMi41IDAtMy40IDEuNy0zLjQgNC4xdjUuN2gtMy41VjcyLjdoMy4zVjc1Yy43LTEuNiAyLjMtMi43IDQtMi43LjMuMS41LjEuOC4yek0xMzYuMSA3NC40di0xLjdoMy4zdjExLjljMCAzLjMtMS45IDUuNi02LjUgNS42LTIuOSAwLTUuNC0xLjUtNS42LTQuMWgzLjVjLjMgMS4yIDEuMiAxLjcgMi42IDEuNyAxLjggMCAyLjgtMS4xIDIuOC0zLjFWODNjLS44IDEuMy0yLjMgMi4xLTMuOCAyLTMuNiAwLTUuNC0yLjYtNS40LTYuNCAwLTMuMiAxLjktNi4zIDUuNC02LjMgMS40IDAgMi45LjggMy43IDIuMXptLTMgOGMxLjkgMCAzLTEuNSAzLTMuNSAwLTEuOC0uNS0zLjktMy0zLjktMS44IDAtMi44IDEuNS0yLjggMy42cy44IDMuOCAyLjggMy44ek0xNTMgNzkuM3YuN2gtOS4xYy4xIDIuMiAxLjEgMy4yIDMuMSAzLjIgMS4zIDAgMi41LS44IDIuOC0xLjZoMy4xYy0uOSAyLjktMi45IDQuMy01LjkgNC4zLTQgMC02LjUtMi44LTYuNS02LjYgMC0zLjkgMi42LTYuNyA2LjUtNi43IDMuOC0uMiA2IDIuOSA2IDYuN3ptLTMuNS0xLjZjLS4zLTEuOS0xLjItMi43LTIuOC0yLjctMS41LS4xLTIuOCAxLTIuOSAyLjV2LjJoNS43ek0xNTguMiA2OC45djMuOGgyLjVWNzVoLTIuNXY2LjNjMCAxLjIuMyAxLjUgMS41IDEuNS40IDAgLjcgMCAxLjEtLjF2Mi43Yy0uNy4xLTEuNC4xLTIuMS4xLTIuNiAwLTQtLjgtNC0zLjFWNzVoLTIuMXYtMi4zaDIuMXYtMy44aDMuNXoiLz48L2c+PC9zdmc+">
+    
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+<!-- my navbar -->
+
+    <div id ="navlist">
+      <a href="#" ></a>
+          <img id="logoimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy0k-NPSGW_BvlUAYhKdjgwRE8W3Pu862tlhDT6UGVz6Vkv8Eo3dQyyTeaPV42b6SCLfM&usqp=CAU" >
+      </a>
+      <a href="#">Categories</a>
+      <a href="#">Deals</a>
+      <a href="#">What's New</a>
+      <a href="#">Pick Up & Delivery</a>
+      
+      <!-- search bar -->
+   <div class="search">
+      <form action="#">
+          <input type="text"placeholder="Search" name="search">
+          
+              
+          <ion-icon name="search-outline"></ion-icon>
+       </form>
+     
+ </div> 
+  
+
+ <span>
+  <i class="fa fa-user-circle" aria-hidden="true"></i>
+     </span>
+     
+      <a id="cart" href="cart.html">
+        <ion-icon name="cart"></ion-icon> <span>0</span>
+      </a>
+
+  </div>   
+
+  
+  <div class="navbar-1">
+      
+      <div class="registry-1"><p>Place select a store</p></div>
+      <div class="registry">
+          <a href="#">Registry</a>
+          <a href="#">Weekly Ad</a>
+          <a href="#">RedCard</a>
+          <a href="#">Gift Cards</a>
+          <a href="#">Find Stores</a>
+          <a href="#">orders</a>
+          <ion-icon id="heart" name="heart-outline"></ion-icon>
+          <a href="#">More</a>
+      </div>
+  </div>
+  <!-- Navigation end here -->
+    <!-- Product start here  -->
+    <div class="container">
+      <div class="adultPack">
+        <h2>Adult Backpacks</h2>
+      </div>
+
+      <div class="page_navigator">
+        Target<span>/ Luggage</span><span>/ Backpacks</span
+        ><span> / Adult Backpacks</span>
+      </div>
+      <div>
+        <h2 class="shop_byCategory">Shop By category</h2>
+      </div>
+      <!-- shop by category -->
+      <div class="shop-1">
+        <div class="image">
+          <img
+            src="https://target.scene7.com/is/image/Target/1133406-190627_1561615655773?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"><p>School Backpacks</p></a>
+        </div>
+        <div class="image">
+          <img
+            src="https://target.scene7.com/is/image/Target/2133406-190627_1561615668583?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"> <p>Travel Backpack</p></a>
+        </div>
+        <div class="image">
+          <img
+            src="https://target.scene7.com/is/image/Target/3133406-190627_1561615682685?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#">
+            <p>Mini & Fashion <br />Backpacks</p></a
+          >
+        </div>
+      </div>
+      <!-- shop top brands -->
+      <h2 class="shop_topBrand">Shop Top Brands</h2>
+      <div class="topbrand">
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/bondka182873-190702_1562080430036?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"><p>Bondka</p></a>
+        </div>
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/embark182873-190701_1561997527181?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"> <p>Embark</p></a>
+        </div>
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/highsierra-200610-1591775590036?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"> <p>High Sierra</p></a>
+        </div>
+
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/pumalogo-200610-1591775800689?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"><p>Puma</p></a>
+        </div>
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/swiss182873-190701_1561997547966?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"> <p>SwissGear</p></a>
+        </div>
+        <div class="image-1">
+          <img
+            src="https://target.scene7.com/is/image/Target/jansport182873-190701_1561997556361?wid=315&hei=315&qlt=60&fmt=webp"
+          />
+          <a href="#"> <p>Trans by JanSport</p></a>
+        </div>
+       
+      </div>
+      <div class="new_arrivals">
+        <!-- yeh pehla hai filter box jisme high to low low to high feature hai  -->
+        <select id="mySelect" onchange="myFunction()">
+          <option value="Featured">Featured</option>
+          <option value="New Arrivals">
+            <h4>Sort by</h4>
+            New Arrivals
+          </option>
+          <option value="Best Sellers">Best Sellers</option>
+          <option value="Price, Low to High">Price, Low to High</option>
+          <option value="Price, High to Low">Price, High to Low</option>
+        </select>
+        <select id="mySelect" onchange="myFunction()">
+          <option value="shipping & Pickup">Shipping & Pickup</option>
+          <option value="New Arrivals" type="checkbox">
+            Buy Online & Pickup
+          </option>
+          <option value="Best Sellers" type="checkbox">in stores</option>
+          <option value="Price, Low to High" type="checkbox">
+            Same day delivery
+          </option>
+          <option value="Price, High to Low" type="checkbox">
+            include out of stock
+          </option>
+        </select>
+      </div>
+
+      <div class="product-detail">
+        <!-- left side par check box hai  -->
+        <div class="left_select">
+          <div class="Pick"><h3>Pickup, delivery & in stores</h3></div>
+          <div class="delivery_pickup">
+            <form>
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <span><ion-icon name="bag-outline"></ion-icon></span
+              ><label> In-store pickup</label>
+              <br />
+              <input class="checkbox" type="checkbox" />
+              <span><ion-icon name="storefront-outline"></ion-icon></span
+              ><label> Buy it at the store</label>
+              <br />
+              <input class="checkbox" type="checkbox" />
+              <span><ion-icon name="bag-add-outline"></ion-icon></span
+              ><label> shipping</label>
+            </form>
+          </div>
+
+          <div class="Pick"><p>More Filters</p></div>
+          <div class="line"></div>
+        </div>
+        <div id="items">
+          <!-- product from local storage  -->
+        
+      
+          <!-- product end here -->
+        </div>
+      </div> --
+  
+    </div>
+
+    <script type="module"src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <scrip nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="product.js"></script>
+    
+  </body>
+</html>
