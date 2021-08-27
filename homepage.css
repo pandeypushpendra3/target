@@ -3,40 +3,64 @@
     margin: 0;
     box-sizing: border-box;
 }
+#main-container{
+    width: 100%;
+    border: 1px solid black;
+    
+}
 #main{
     max-width: 100%;
-}
-
-#navlist{
-    width: 100%;
-    background-color: red;
-    /* margin: 10px; */
+    height: 100px;
+    background-color:#cc0000 ;
     display: flex;
+    padding: 10px;
+   
+}
+#main>div{
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
+
+.logo{
+  color: #fff;
 }
-#navlist a{
-    color: white;
-    
-    padding:10px;
+#main>div>a{
+    color: #fff;
+    font-size: 25px;
     text-decoration: none;
-    font-size:16px;
-    font-family: Targetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: left;
 }
-#navlist >a >img{
-    height: 41px;
-    width: 41px;
+#main>div>a:hover{
+ 
+    text-decoration: underline;
+}
+/* #search_bar{
+    width: 300px;
+    height: 50px;
+} */
+#search_div{
+    display: flex;
+}
+
+#search_div>input{
+    padding: 5px;
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+#search-logo{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
     
-    
 }
-#logoimg{
-    height: 41px;
-    width: 41px;
+#signInlogo{
+    margin-left: 20px;
+    margin-right: 20px;
 }
-.search input{
-    height: 20px;
-    margin-top: 10px;
-    width: 50%;
+#cartlogo{
+    display: flex;
+    color: #fff;
 }
 .navbar-1{
     
@@ -79,7 +103,7 @@ width:100%;
 .childtext{
     position: absolute;
     top: 
-    50%;
+    60%;
     padding: 30px;
 }
 .childtext p{
@@ -95,9 +119,39 @@ width:100%;
     border-radius: 5px;
     
 }
-.child-2{
+#child-2{
     height: 300px;
     width: 100%;
-    background-color: lawngreen;
-    display: flex;
+  /* border: 1px solid black; */
+  background-color:goldenrod;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+ text-align: center;
+
+ 
+ font-size:16px;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight: 700;
+color: black;
+}
+
+#child-2 >div >a >img{
+    width:100%;
+    margin-top: 10px;
+    
+}
+.child-3 {
+    width:100%;
+    margin-top: 50px;
+    /* border:1px solid black; */
+}
+.child-3 img{
+    width: 100%;
+}
+.footer{
+    width: 100%;
+    margin: auto;
+}
+.footer img{
+    width: 100%;
 }

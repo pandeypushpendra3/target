@@ -1,0 +1,14 @@
+#overLay{
+    width:75%;
+    margin:auto;
+    background-size: cover;
+      background-image: linear-gradient(to right, #0a66c2c7, #02328094),
+      url("https://images.unsplash.com/photo-1547949003-9792a18a2601?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFnc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+
+}
+#overlay img{
+    width: 75%;
+    border:1px solid black;
+    margin: auto;
+    cursor: pointer;
+}

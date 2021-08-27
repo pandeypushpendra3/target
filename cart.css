@@ -5,38 +5,57 @@
 /* navabr  starts here */
 #main{
   max-width: 100%;
-}
-
-#navlist{
-  width: 100%;
-  background-color: red;
-  /* margin: 10px; */
+  height: 100px;
+  background-color:#cc0000 ;
   display: flex;
+  padding: 10px;
+ 
+}
+#main>div{
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+
+.logo{
+color: #fff;
 }
-#navlist a{
-  color: white;
-  
-  padding:10px;
+#main>div>a{
+  color: #fff;
+  font-size: 25px;
   text-decoration: none;
-  font-size:16px;
-  font-family: Targetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: left;
 }
-#navlist >a >img{
-  height: 41px;
-  width: 41px;
+#main>div>a:hover{
+
+  text-decoration: underline;
+}
+/* #search_bar{
+  width: 300px;
+  height: 50px;
+} */
+#search_div{
+  display: flex;
+}
+
+#search_div>input{
+  padding: 5px;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+}
+#search-logo{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
   
-  
 }
-#logoimg{
-  height: 41px;
-  width: 41px;
+#signInlogo{
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.search input{
-  height: 20px;
-  margin-top: 10px;
-  width: 50%;
+#cartlogo{
+  display: flex;
+  color: #fff;
 }
 .navbar-1{
   
@@ -76,7 +95,8 @@ display: flex;
   /* border: 1px solid black; */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 70% 30%;
+ 
 }
 
 .your-cart{
@@ -84,53 +104,148 @@ display: flex;
   display: grid;
   
 }
-.product-cart{
-  border: 1px solid black;
-}
+/* .product-cart{
+  /* border: 1px solid black; */
+/* } */ 
 .yourCart{
   text-align: center;
+  background-color:#EEEEEE;
+  
 }
-
-.payment-final{
-  border: 1px solid black;
+.yourCart >p{
+  font-size:16px;
+  color: #333333;
+  font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+}
+.shipping{
+  font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  font-size: 19px;
+  background-color: white;
+}
+.shipping p{
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+}
+.products-information{
+  background-color:#BDBDBD;
+}
+.product-cart{
+  background-color:white;
 }
 #data{
   display: grid;
-  grid-gap: 40px;
-  grid-template-rows: 20% 20% 20%;
-  margin-left: 50px;
+  /* grid-gap: 10%; */
+  /* grid-template-rows: 15% 15% 15% 15%; */
+/* border: 1px solid black; */
   margin-top: 50px;
   
+  
+}
+.products-information{
+  display: grid;
+   grid-template-columns: 20% 20% 20% 20%;
+   grid-gap: 5%;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: 700;
 }
 .cart-div{
-  display: flex;
-  height:100px;
-  width: 50%;
+  display: grid;
+  grid-template-columns:20% 20% 20% 20%;
+  grid-gap: 5%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
 .cart-div img{
-  height: 100px;
-  width:150px;
+  height: 50px;
+  width:50px;
+}
+/* .payment-final{
+  /* border: 1px solid black; */
+/* } */ 
+.order-summary >p{
+ font-size: 19px;
+ /* font-weight: bold; */
+ font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+   text-align: start;
+   line-height:24px;
+   margin: 10px;
+}
+#promocode{
+  height: 25px;
+  margin-left: 10px;
+}
+#Apply{
+  width:50px;
+  height:20px;
+}
+#Apply p{
+  font-size:10px;
+  font-family: 'Nunito', sans-serif;
+  
 }
 .payment{
   width:100%;
-display: flex;
-  border-top: 1px solid black;
+display: grid;
+grid-template-columns: 45% 45%;
+grid-gap: 5%;
+  /* border-top: 1px solid black; */
 }
-.cart-payment{
+.delivery p{
+  font-size:14px;
+font-family: 'Nunito', sans-serif;
+padding: 5px;
+font-weight:800;
+margin-left: 10px;
+}
+.delivery h6{
+  font-size:10px;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 5px;
   
+}
+.cart-payment p{
+  font-size:14px;
+text-align:right;
+  font-family: 'Nunito', sans-serif;
+  padding: 5px;
+  font-weight:800;
+}
+.total-payment{
+  display: flex;
+  
+}
+.total-payment h3{
+  
+  font-family: 'Nunito', sans-serif;margin-left: 10px;
+}
+.total-payment span{
+  font-family: 'Nunito', sans-serif;
+  margin-left: 180px;
+   font-weight:800; 
 }
 #total-paymentButton{
-  margin-left:30px;
+  margin-left:20px;
   text-align: center;
-  background-color:red;
+  background-color:#D32F2F;
   height: 40px;
-  width: 150px;
-  
-  font-size: 20px;
-  font-weight: bold;
-  
+  width: 90%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: Bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  border:none !important;
 }
 #total-paymentButton a{
   text-decoration: none;
   color: beige;
+}
+hr{
+  margin: 10px;
 }

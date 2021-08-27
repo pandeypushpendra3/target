@@ -8,13 +8,14 @@ const user_data = [
   if (localStorage.getItem("user_data") == null) {
     localStorage.setItem("user_data", JSON.stringify(user_data));
   }
+  
   function check(e) {
     e.preventDefault();
   
     const form = document.getElementById("login");
   
-    const email = form.email.value;
-    const password = form.password.value;
+    const email = getElementById("data1").value;
+    const password = getElementById("data2").value;
   
     const admins = JSON.parse(localStorage.getItem("user_data"));
   
@@ -22,7 +23,7 @@ const user_data = [
       let u = admins[i].email;
       let p = admins[i].password;
       if (u === email && p === password) {
-        window.location.href = "myaccount.html";
+        window.location.href = "homepage.html";
         break;
       } else {
           alert("invalid Credentials");

@@ -2,41 +2,59 @@
   margin: 0;
   padding: 0;
 }
-/* navabr  starts here */
 #main{
   max-width: 100%;
-}
-
-#navlist{
-  width: 100%;
-  background-color: red;
-  /* margin: 10px; */
+  height: 100px;
+  background-color:#cc0000 ;
   display: flex;
+  padding: 10px;
+ 
+}
+#main>div{
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+
+.logo{
+color: #fff;
 }
-#navlist a{
-  color: white;
-  
-  padding:10px;
+#main>div>a{
+  color: #fff;
+  font-size: 25px;
   text-decoration: none;
-  font-size:16px;
-  font-family: Targetica, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: left;
 }
-#navlist >a >img{
-  height: 41px;
-  width: 41px;
+#main>div>a:hover{
+
+  text-decoration: underline;
+}
+/* #search_bar{
+  width: 300px;
+  height: 50px;
+} */
+#search_div{
+  display: flex;
+}
+
+#search_div>input{
+  padding: 5px;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+}
+#search-logo{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
   
-  
 }
-#logoimg{
-  height: 41px;
-  width: 41px;
+#signInlogo{
+  margin-left: 20px;
+  margin-right: 20px;
 }
-.search input{
-  height: 20px;
-  margin-top: 10px;
-  width: 50%;
+#cartlogo{
+  display: flex;
+  color: #fff;
 }
 .navbar-1{
   
@@ -73,7 +91,7 @@ display: flex;
 .container {
   width: 90%;
   
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   margin: auto;
 }

@@ -2,20 +2,16 @@ function store(e) {
     e.preventDefault();
     
   
-    let email = document.getElementById("Email").value;
-    console.log(email);
-    let first_name = document.getElementById("first").value;
-    let last_name = document.getElementById("last").value;
-    let password = document.getElementById("createPassword").value;
-    let Mobile = document.getElementById("Mobile").value;
-  
+    
     let user = {
-      email,
-      first_name,
-      last_name,
-      password,
-      Mobile,
-      // all_orders: []
+     
+       email : document.getElementById("Email").value,
+  
+     first_name : document.getElementById("first").value,
+     last_name : document.getElementById("last").value,
+     password : document.getElementById("createPassword").value,
+     Mobile : document.getElementById("Mobile").value
+  
     };
   
     let arr;

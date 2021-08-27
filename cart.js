@@ -3,7 +3,7 @@ console.log(cart_data);
 
 let cartNumbers = JSON.parse(localStorage.getItem("cartNumbers"));
 console.log(cartNumbers);
-let cart_N = document.querySelector(".cart span").textContent = cartNumbers
+let cart_N = document.querySelector("#cartlogo label").textContent = cartNumbers
 let Your_cart = document.querySelector(".yourCart p span").innerHTML = `(${cartNumbers} items)`
 let shipping = document.querySelector(".shipping p").textContent = `${cartNumbers} items`
 let total_items = document.querySelector(".delivery p span").textContent =`(${cartNumbers} items)`
@@ -37,7 +37,7 @@ cart_data.forEach(function (el) {
 
   data_div.append(div);
  let cart_price = cartNumbers*el.price
- console.log(cart_price)
+//  console.log(cart_price)
  final_total =cart_price
  let cart_total1 =document.querySelector(".payment .cart-payment p").textContent= `$${final_total}`
 
@@ -47,7 +47,7 @@ var tax = document.getElementById("tax").textContent="$5.00"
 let cart_total1 =document.querySelector(".payment .cart-payment p").textContent =`$${final_total}`;
 console.log("cart_total1" ,cart_total1);
 
-let total_amount = document.querySelector(".total-payment span").textContent =`${final_total*1.04}`;
+let total_amount = document.querySelector(".total-payment span").textContent =`$${final_total*1.04}`;
 
 
 console.log("total_amount", total_amount);
@@ -58,18 +58,24 @@ apply.addEventListener("click",function(){
   
   var promocode = document.getElementById("promocode").value;
   console.log(promocode);
-  console.log('clicked')
-  if (promocode =""){
-     cart_total1.textContent =`$${final_total}`;
+  console.log('clicked');
+  if (promocode ==""){
+    console.log("clicked2")
+    let cart_total1 =document.querySelector(".payment .cart-payment p").textContent =`$${final_total}`;
+    //  cart_total1.textContent =`$${final_total}`;
     console.log("cart_total2",cart_total1)
-    total_amount=`${final_total*1.04}`
+    let total_amount = document.querySelector(".total-payment span").textContent =`${final_total*1.04}`;
   }
   if(promocode == 'Pushpendra21'){
     var total = final_total -(final_total*0.21);
-   cart_total1.textContent =`$${total}`;
-  total_amount=`${total*1.04}`  
-  
+    let cart_total1 =document.querySelector(".payment .cart-payment p").textContent =`$${total}`;
+  //  cart_total1.textContent =`$${total}`;
+  // total_amount=`${total*1.04}`  
+  let total_amount = document.querySelector(".total-payment span").textContent =`${total*1.01}`;
   console.log("cart_total",total);
     console.log(total)
   }
 });
+
+var checkout = document.getElementById("total-paymentButton")
+
