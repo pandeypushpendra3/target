@@ -71,7 +71,7 @@ apply.addEventListener("click",function(){
     let cart_total1 =document.querySelector(".payment .cart-payment p").textContent =`$${total}`;
   //  cart_total1.textContent =`$${total}`;
   // total_amount=`${total*1.04}`  
-  let total_amount = document.querySelector(".total-payment span").textContent =`${total*1.01}`;
+  let total_amount = document.querySelector(".total-payment span").textContent =`${total*(1.01).toFixed(0)}`;
   console.log("cart_total",total);
     console.log(total)
   }
