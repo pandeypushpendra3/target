@@ -1,4 +1,4 @@
-# target
+# Target.com 
 It's a clone of Target.com
 I had given an individual Project. So my project was to clone target.com Which is an American E-commerce Website where you can find everything from groceries to electronics. So, I have used HTML, CSS, Javascript to make this website. Html is used for the framework of this website, Beautification of this website is done with the help of CSS, For the functionality of this Website, I used javascript. My flow of this website is Homepage, sign in, signup, then when you click on the menu you landed on the product page, in product page each product have a button which I have added the functionality that whenever you can click on that button it will add to cart as well as increase the count the product number.
 Also, I have added a feature of sorting based on the price.
